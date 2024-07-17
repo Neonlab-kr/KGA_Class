@@ -146,6 +146,8 @@ C++ <- 메모리 최적화 언어
 // 프로그래머 생성
 //#include "MainGame.h"
 
+void TextColor(int font, int backGround);
+
 using namespace std;
 
 void main()
@@ -180,7 +182,52 @@ void main()
 	cout << "★" << endl;
 	cout << "■" << endl;
 
+
+
+	printf("지옥에 온걸 환영해 얘들아! \n");
+
+	/*
+	▶ printf() / scanf()의 서식 문자
+	- 서식 문자는 문자열을 출력 / 입력을 받을 때 해당 서식 문자의 자리를 다른 수로 대체하기 위한 자리 매김 역할을 하는 문자를 의미한다.
+
+	- 사용하는 이유는 고정되어 있지 않는 문자열을 출력 / 입력 받는 것이 가능하기 때문
+
+	▷ printf / scanf 서식 문자
+
+	a. %d	-> int
+	b. %ld	-> long
+	c. %lld	-> long long
+	d. %c	-> char
+	e. %s	-> string
+	f. %f	-> float
+	g. %lf	-> double
+
+
+	▷ printf 특수문자
+
+	- \n	-> 개행
+	- \t	-> 수평
+	- \v	-> 수직
+	- \\	-> \
+	- \?	-> ?
+	- \'	-> '
+	- \"	-> "
+
+	*/
+	
+	//std::cout << "오늘 날씨가 \"매우\" 안좋다." << std::endl;
+
+	TextColor(4, 15);
+	cout << "===========" << endl;
+
 }
+
+void TextColor(int font, int backGround)
+{
+	int Color = font + backGround * 16;
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color);
+}
+//폰트와 배경 색을 변경하는 것으로 보임.
 
 
 /*
