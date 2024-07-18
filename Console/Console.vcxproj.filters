@@ -7,6 +7,9 @@
     <ClCompile Include="Example_02.cpp">
       <Filter>Lesson\02. 자료형 + 변수 + 난수%28C++11↓%29</Filter>
     </ClCompile>
+    <ClCompile Include="Example_03.cpp">
+      <Filter>Lesson\03. 연산자 + 반복문</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -17,6 +20,9 @@
     </Filter>
     <Filter Include="Lesson\02. 자료형 + 변수 + 난수%28C++11↓%29">
       <UniqueIdentifier>{d563f7ef-5a8c-4f4d-a620-347abc238d4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\03. 연산자 + 반복문">
+      <UniqueIdentifier>{886c48af-c555-4ce2-bc0e-01fcbadbde4b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
