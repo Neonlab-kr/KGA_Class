@@ -10,6 +10,12 @@
     <ClCompile Include="Example_03.cpp">
       <Filter>Lesson\03. 연산자 + 반복문</Filter>
     </ClCompile>
+    <ClCompile Include="Example_04.cpp">
+      <Filter>Lesson\04. 조건문</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_04_B.cpp">
+      <Filter>Lesson\04. 조건문</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -23,6 +29,9 @@
     </Filter>
     <Filter Include="Lesson\03. 연산자 + 반복문">
       <UniqueIdentifier>{886c48af-c555-4ce2-bc0e-01fcbadbde4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\04. 조건문">
+      <UniqueIdentifier>{2feb6d34-bdde-4dd1-a4df-4ddd0ea00fa3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -7,7 +7,7 @@
 using std::cout;
 using std::endl;
 
-#pragma reegion 연산자 + 반복문
+#pragma region 연산자 + 반복문
 /*
 ▶ 연산자란?
 
