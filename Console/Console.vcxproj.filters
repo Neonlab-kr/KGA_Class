@@ -16,6 +16,12 @@
     <ClCompile Include="Example_04_B.cpp">
       <Filter>Lesson\04. 조건문</Filter>
     </ClCompile>
+    <ClCompile Include="Example_05.cpp">
+      <Filter>Lesson\05.함수 + 변/상수 + 전처리기</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_05_B.cpp">
+      <Filter>Lesson\05.함수 + 변/상수 + 전처리기</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -33,8 +39,8 @@
     <Filter Include="Lesson\04. 조건문">
       <UniqueIdentifier>{2feb6d34-bdde-4dd1-a4df-4ddd0ea00fa3}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="MainGame.h" />
+    <Filter Include="Lesson\05.함수 + 변/상수 + 전처리기">
+      <UniqueIdentifier>{359efa3e-8ccf-4069-8e9b-94648fd7e56d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
