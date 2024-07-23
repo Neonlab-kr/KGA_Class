@@ -17,10 +17,16 @@
       <Filter>Lesson\04. 조건문</Filter>
     </ClCompile>
     <ClCompile Include="Example_05.cpp">
-      <Filter>Lesson\05.함수 + 변/상수 + 전처리기</Filter>
+      <Filter>Lesson\05. 함수 + 변/상수 + 전처리기</Filter>
     </ClCompile>
     <ClCompile Include="Example_05_B.cpp">
-      <Filter>Lesson\05.함수 + 변/상수 + 전처리기</Filter>
+      <Filter>Lesson\05. 함수 + 변/상수 + 전처리기</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_06.cpp">
+      <Filter>Lesson\06. 배열</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_06_B.cpp">
+      <Filter>Lesson\06. 배열</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -39,8 +45,11 @@
     <Filter Include="Lesson\04. 조건문">
       <UniqueIdentifier>{2feb6d34-bdde-4dd1-a4df-4ddd0ea00fa3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Lesson\05.함수 + 변/상수 + 전처리기">
+    <Filter Include="Lesson\05. 함수 + 변/상수 + 전처리기">
       <UniqueIdentifier>{359efa3e-8ccf-4069-8e9b-94648fd7e56d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\06. 배열">
+      <UniqueIdentifier>{226ddb12-d5a0-4c0f-bae3-8d058684ab84}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
