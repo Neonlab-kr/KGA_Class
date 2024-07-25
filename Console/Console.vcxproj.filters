@@ -28,6 +28,24 @@
     <ClCompile Include="Example_06_B.cpp">
       <Filter>Lesson\06. 배열</Filter>
     </ClCompile>
+    <ClCompile Include="Example_07.cpp">
+      <Filter>Lesson\07. 삼항연산자 + 문자열 + 오버로딩</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_07_B.cpp">
+      <Filter>Lesson\07. 삼항연산자 + 문자열 + 오버로딩</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_08.cpp">
+      <Filter>Lesson\08. 사용자정의자료형</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_08_EnumClass.cpp">
+      <Filter>Lesson\08. 사용자정의자료형</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_08_Enum.cpp">
+      <Filter>Lesson\08. 사용자정의자료형</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_08_Struct.cpp">
+      <Filter>Lesson\08. 사용자정의자료형</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -50,6 +68,12 @@
     </Filter>
     <Filter Include="Lesson\06. 배열">
       <UniqueIdentifier>{226ddb12-d5a0-4c0f-bae3-8d058684ab84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\07. 삼항연산자 + 문자열 + 오버로딩">
+      <UniqueIdentifier>{626f32ef-1b61-4152-879c-fb0dbaa76154}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\08. 사용자정의자료형">
+      <UniqueIdentifier>{b49d0569-99ed-4de0-b2ef-7e16c399478c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
