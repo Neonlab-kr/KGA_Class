@@ -46,6 +46,18 @@
     <ClCompile Include="Example_08_Struct.cpp">
       <Filter>Lesson\08. 사용자정의자료형</Filter>
     </ClCompile>
+    <ClCompile Include="Example_09.cpp">
+      <Filter>Lesson\09. 포인터</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_09_Pointer.cpp">
+      <Filter>Lesson\09. 포인터</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_09_ArrayPointer.cpp">
+      <Filter>Lesson\09. 포인터</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_09_CallByRef.cpp">
+      <Filter>Lesson\09. 포인터</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -74,6 +86,9 @@
     </Filter>
     <Filter Include="Lesson\08. 사용자정의자료형">
       <UniqueIdentifier>{b49d0569-99ed-4de0-b2ef-7e16c399478c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\09. 포인터">
+      <UniqueIdentifier>{4fac2b25-93f4-4eee-b7b6-bd1ce8dcef8c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
