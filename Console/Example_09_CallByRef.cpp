@@ -34,8 +34,8 @@ int main()
 
 	int num2 = 30;
 	Reference(num2);
-	cout << "num1의 값 : " << num2 << endl;
-	cout << "num1의 주소값 : " << &num2 << endl;
+	cout << "num2의 값 : " << num2 << endl;
+	cout << "num2의 주소값 : " << &num2 << endl;
 
 	cout << endl;
 
@@ -68,7 +68,8 @@ void Value(int n)
 void Address(int* n)
 {
 	*n = 10;
-	cout << "n의 값 : " << *n << endl;
+	cout << "*n의 값 : " << *n << endl;
+	cout << "n의 값 : " << n << endl;
 	cout << "n의 주소값 : " << &n << endl;
 }
 
