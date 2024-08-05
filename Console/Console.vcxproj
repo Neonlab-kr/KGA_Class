@@ -91,6 +91,28 @@
     <ClCompile Include="Example_10_Destructor.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Example_11.cpp" />
+    <ClCompile Include="Example_11_CopyConstructor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Example_11_Extern.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Example_11_HeaderPrac_Mage.cpp" />
+    <ClCompile Include="Example_11_HeaderPrac_main.cpp" />
+    <ClCompile Include="Example_11_HeaderPrac_Unit.cpp" />
+    <ClCompile Include="Example_11_HeaderPrac_Warrior.cpp" />
+    <ClCompile Include="Example_11_Inheritance.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Example_11_StaticVariable.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Example_11_HeaderPrac_Mage.h" />
+    <ClInclude Include="Example_11_HeaderPrac_Unit.h" />
+    <ClInclude Include="Example_11_HeaderPrac_Warrior.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

@@ -73,6 +73,33 @@
     <ClCompile Include="Example_10_Class_GetterSetter.cpp">
       <Filter>Lesson\10. 동적할당 + 클래스</Filter>
     </ClCompile>
+    <ClCompile Include="Example_11.cpp">
+      <Filter>Lesson\11. 복사생성자 + 상속 + static/extern + 헤더</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_11_StaticVariable.cpp">
+      <Filter>Lesson\11. 복사생성자 + 상속 + static/extern + 헤더</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_11_Extern.cpp">
+      <Filter>Lesson\11. 복사생성자 + 상속 + static/extern + 헤더</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_11_CopyConstructor.cpp">
+      <Filter>Lesson\11. 복사생성자 + 상속 + static/extern + 헤더</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_11_Inheritance.cpp">
+      <Filter>Lesson\11. 복사생성자 + 상속 + static/extern + 헤더</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_11_HeaderPrac_Mage.cpp">
+      <Filter>Lesson\11. 복사생성자 + 상속 + static/extern + 헤더\헤더 연습\소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_11_HeaderPrac_main.cpp">
+      <Filter>Lesson\11. 복사생성자 + 상속 + static/extern + 헤더\헤더 연습\소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_11_HeaderPrac_Unit.cpp">
+      <Filter>Lesson\11. 복사생성자 + 상속 + static/extern + 헤더\헤더 연습\소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_11_HeaderPrac_Warrior.cpp">
+      <Filter>Lesson\11. 복사생성자 + 상속 + static/extern + 헤더\헤더 연습\소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -108,5 +135,28 @@
     <Filter Include="Lesson\10. 동적할당 + 클래스">
       <UniqueIdentifier>{5f677a4e-95aa-42b2-b7f5-01142742d967}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lesson\11. 복사생성자 + 상속 + static/extern + 헤더">
+      <UniqueIdentifier>{20ffbb92-356b-4195-8100-06b2fe70e3eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\11. 복사생성자 + 상속 + static/extern + 헤더\헤더 연습">
+      <UniqueIdentifier>{3d809a96-e098-4488-82d7-c38f4e79af7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\11. 복사생성자 + 상속 + static/extern + 헤더\헤더 연습\소스 파일">
+      <UniqueIdentifier>{ac39992e-695f-4943-b4f1-6f058fc57da8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\11. 복사생성자 + 상속 + static/extern + 헤더\헤더 연습\헤더 파일">
+      <UniqueIdentifier>{ba825f17-e597-4933-bdad-8733d4dca81c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Example_11_HeaderPrac_Mage.h">
+      <Filter>Lesson\11. 복사생성자 + 상속 + static/extern + 헤더\헤더 연습\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Example_11_HeaderPrac_Unit.h">
+      <Filter>Lesson\11. 복사생성자 + 상속 + static/extern + 헤더\헤더 연습\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Example_11_HeaderPrac_Warrior.h">
+      <Filter>Lesson\11. 복사생성자 + 상속 + static/extern + 헤더\헤더 연습\헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
