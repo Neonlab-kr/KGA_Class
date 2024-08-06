@@ -100,6 +100,33 @@
     <ClCompile Include="Example_11_HeaderPrac_Warrior.cpp">
       <Filter>Lesson\11. 복사생성자 + 상속 + static/extern + 헤더\헤더 연습\소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Example_12.cpp">
+      <Filter>Lesson\12. 추상클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_12_Vehicle.cpp">
+      <Filter>Lesson\12. 추상클래스\VirtualFunction\소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_12_Bike.cpp">
+      <Filter>Lesson\12. 추상클래스\VirtualFunction\소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_12_Car.cpp">
+      <Filter>Lesson\12. 추상클래스\VirtualFunction\소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_12_VF_Main.cpp">
+      <Filter>Lesson\12. 추상클래스\VirtualFunction\소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_12_Binding.cpp">
+      <Filter>Lesson\12. 추상클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_12_AbstractUnit.cpp">
+      <Filter>Lesson\12. 추상클래스\Abstract\소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_12_Abstract_Main.cpp">
+      <Filter>Lesson\12. 추상클래스\Abstract\소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_12_AbstractPlayer.cpp">
+      <Filter>Lesson\12. 추상클래스\Abstract\소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -147,6 +174,27 @@
     <Filter Include="Lesson\11. 복사생성자 + 상속 + static/extern + 헤더\헤더 연습\헤더 파일">
       <UniqueIdentifier>{ba825f17-e597-4933-bdad-8733d4dca81c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lesson\12. 추상클래스">
+      <UniqueIdentifier>{373d02a6-dcf0-4fcb-b83b-be0fbbd3d658}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\12. 추상클래스\VirtualFunction">
+      <UniqueIdentifier>{3c903426-dfa8-43dd-8d06-cab19a3a84e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\12. 추상클래스\VirtualFunction\소스 파일">
+      <UniqueIdentifier>{71cf7444-ac12-4f09-b72d-c24dfd8542b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\12. 추상클래스\VirtualFunction\헤더 파일">
+      <UniqueIdentifier>{8c9ebdf7-e517-4ab6-b231-12358aebbda6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\12. 추상클래스\Abstract">
+      <UniqueIdentifier>{4ec1047d-9730-4cc9-ae25-f60e8048311d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\12. 추상클래스\Abstract\소스 파일">
+      <UniqueIdentifier>{981257ce-ddde-4e10-af29-79dd81777642}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\12. 추상클래스\Abstract\헤더 파일">
+      <UniqueIdentifier>{9a333817-f59d-420c-a6cf-2fccaaf21f54}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Example_11_HeaderPrac_Mage.h">
@@ -157,6 +205,21 @@
     </ClInclude>
     <ClInclude Include="Example_11_HeaderPrac_Warrior.h">
       <Filter>Lesson\11. 복사생성자 + 상속 + static/extern + 헤더\헤더 연습\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Example_12_Vehicle.h">
+      <Filter>Lesson\12. 추상클래스\VirtualFunction\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Example_12_Bike.h">
+      <Filter>Lesson\12. 추상클래스\VirtualFunction\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Example_12_Car.h">
+      <Filter>Lesson\12. 추상클래스\VirtualFunction\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Example_12_AbstractUnit.h">
+      <Filter>Lesson\12. 추상클래스\Abstract\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Example_12_AbstractPlayer.h">
+      <Filter>Lesson\12. 추상클래스\Abstract\헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
