@@ -127,6 +127,18 @@
     <ClCompile Include="Example_12_AbstractPlayer.cpp">
       <Filter>Lesson\12. 추상클래스\Abstract\소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Example_13.cpp">
+      <Filter>Lesson\13</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_13_UpDown.cpp">
+      <Filter>Lesson\13</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_13_Template.cpp">
+      <Filter>Lesson\13</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_13_Template_01.cpp">
+      <Filter>Lesson\13</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -194,6 +206,9 @@
     </Filter>
     <Filter Include="Lesson\12. 추상클래스\Abstract\헤더 파일">
       <UniqueIdentifier>{9a333817-f59d-420c-a6cf-2fccaaf21f54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\13">
+      <UniqueIdentifier>{9462ebe9-e2fb-422e-90a5-b2905b18870d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

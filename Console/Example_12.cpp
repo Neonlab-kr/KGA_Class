@@ -1,9 +1,3 @@
-#pragma region template
-/*
-
-*/
-#pragma endregion
-
 #pragma region 가상 함수(Vitrual Function)
 /*
 ▷ 다형성이란?
