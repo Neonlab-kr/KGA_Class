@@ -12,7 +12,7 @@ public:
 	virtual T area() const = 0;
 };
 
-template <typename T>/
+template <typename T>
 class Circle : public Shape<T>
 {
 private:

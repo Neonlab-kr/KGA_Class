@@ -128,16 +128,25 @@
       <Filter>Lesson\12. 추상클래스\Abstract\소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Example_13.cpp">
-      <Filter>Lesson\13</Filter>
+      <Filter>Lesson\13. 템플릿 + 업/다운캐스팅</Filter>
     </ClCompile>
     <ClCompile Include="Example_13_UpDown.cpp">
-      <Filter>Lesson\13</Filter>
+      <Filter>Lesson\13. 템플릿 + 업/다운캐스팅</Filter>
     </ClCompile>
     <ClCompile Include="Example_13_Template.cpp">
-      <Filter>Lesson\13</Filter>
+      <Filter>Lesson\13. 템플릿 + 업/다운캐스팅</Filter>
     </ClCompile>
     <ClCompile Include="Example_13_Template_01.cpp">
-      <Filter>Lesson\13</Filter>
+      <Filter>Lesson\13. 템플릿 + 업/다운캐스팅</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_14.cpp">
+      <Filter>Lesson\14. STL + Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_14_Vector.cpp">
+      <Filter>Lesson\14. STL + Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_14_Vector_02.cpp">
+      <Filter>Lesson\14. STL + Vector</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -207,8 +216,11 @@
     <Filter Include="Lesson\12. 추상클래스\Abstract\헤더 파일">
       <UniqueIdentifier>{9a333817-f59d-420c-a6cf-2fccaaf21f54}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Lesson\13">
+    <Filter Include="Lesson\13. 템플릿 + 업/다운캐스팅">
       <UniqueIdentifier>{9462ebe9-e2fb-422e-90a5-b2905b18870d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\14. STL + Vector">
+      <UniqueIdentifier>{9df58aff-a990-4a67-9cf9-76e65b881692}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
