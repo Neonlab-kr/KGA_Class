@@ -148,6 +148,18 @@
     <ClCompile Include="Example_14_Vector_02.cpp">
       <Filter>Lesson\14. STL + Vector</Filter>
     </ClCompile>
+    <ClCompile Include="Example_15.cpp">
+      <Filter>Lesson\15. List + Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_15_List.cpp">
+      <Filter>Lesson\15. List + Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_15_Map.cpp">
+      <Filter>Lesson\15. List + Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_15_Map_02.cpp">
+      <Filter>Lesson\15. List + Map</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -221,6 +233,9 @@
     </Filter>
     <Filter Include="Lesson\14. STL + Vector">
       <UniqueIdentifier>{9df58aff-a990-4a67-9cf9-76e65b881692}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\15. List + Map">
+      <UniqueIdentifier>{c84ce4a1-c513-4ab9-9d85-2ed6b78353cd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
