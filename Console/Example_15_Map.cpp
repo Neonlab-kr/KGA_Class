@@ -63,9 +63,11 @@ int main()
 
 	cout << "Apple : " << m.count("Apple") << endl;
 
+	system("cls");
+
 	for (map<string, int>::iterator it = m.begin(); it != m.end(); it++)
 	{
-
+		cout << it->first << endl;
 	}
 
 	return 0;

@@ -160,6 +160,21 @@
     <ClCompile Include="Example_15_Map_02.cpp">
       <Filter>Lesson\15. List + Map</Filter>
     </ClCompile>
+    <ClCompile Include="Example_16.cpp">
+      <Filter>Lesson\16.</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_16_SingleLinkedList.cpp">
+      <Filter>Lesson\16.\SingleLinkedList\소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Exampla_16_RecursiveFunction.cpp">
+      <Filter>Lesson\16.</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_100_Singleton.cpp">
+      <Filter>Lesson\17.</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_100.cpp">
+      <Filter>Lesson\17.</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -237,6 +252,21 @@
     <Filter Include="Lesson\15. List + Map">
       <UniqueIdentifier>{c84ce4a1-c513-4ab9-9d85-2ed6b78353cd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lesson\16.">
+      <UniqueIdentifier>{27febf32-5ad6-4f92-abf1-85a162ecd837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\16.\SingleLinkedList">
+      <UniqueIdentifier>{98612234-141c-4333-a7dd-7c6918a02410}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\16.\SingleLinkedList\소스 파일">
+      <UniqueIdentifier>{6388a39c-4697-40c4-9d9d-cf4a3a483640}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\16.\SingleLinkedList\헤더 파일">
+      <UniqueIdentifier>{952322a4-ebc6-41de-b6e3-72063b316090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\17.">
+      <UniqueIdentifier>{d2d69c01-1380-4a43-8d05-f2e97d7fa64a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Example_11_HeaderPrac_Mage.h">
@@ -263,5 +293,10 @@
     <ClInclude Include="Example_12_AbstractPlayer.h">
       <Filter>Lesson\12. 추상클래스\Abstract\헤더 파일</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Example_16_SingleLinkedList.h">
+      <Filter>Lesson\16.\SingleLinkedList\헤더 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>
