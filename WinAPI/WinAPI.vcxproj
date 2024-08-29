@@ -127,8 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="C3DMatrix.cpp" />
+    <ClCompile Include="C3DVector.cpp" />
+    <ClCompile Include="Stdafx.cpp" />
     <ClCompile Include="WinAPI.cpp" />
     <ClCompile Include="text.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C3DMatrix.h" />
+    <ClInclude Include="C3DVector.h" />
+    <ClInclude Include="CommonMacroFunction.h" />
+    <ClInclude Include="Stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
