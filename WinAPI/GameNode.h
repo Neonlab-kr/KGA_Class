@@ -1,13 +1,20 @@
 #pragma once
+#include "GImage.h"//패턴이 들어오는게 좋음(이미지 매니저 등)
 
 class GameNode abstract
 {
+private:
+	GImage* _backBuffer;
+	void setBackBuffer();
+
 public:
 	//HRESULT : 함수의 성공적인 종료 여부를 확인하는 반환형(32비트 signed 정수 (0 또는 양수 -> 성공, 음수 -> 실패))
 	virtual HRESULT init(void);
 	virtual void release(void);
 	virtual void update(void);
 	virtual void render(HDC hdc);
+
+	GImage* getBackBuffer(void) { return _backBuffer; }
 
 	// 메인 프로시저
 	// LRESULT : 콜백 반환형

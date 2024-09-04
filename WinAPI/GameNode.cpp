@@ -1,6 +1,7 @@
 #include "Stdafx.h"
 #include "GameNode.h"
 
+
 HRESULT GameNode::init(void)
 {
     SetTimer(_hWnd, 1, 10, NULL);
@@ -8,8 +9,17 @@ HRESULT GameNode::init(void)
     KEYMANAGER->init();
     RND->init();
 
+    setBackBuffer();
+
     return S_OK;//함수의 성공
 }
+
+void GameNode::setBackBuffer()//백 버퍼를 통해 메모리를 사용하고 CPU를 살림
+{
+    _backBuffer = new GImage();
+    _backBuffer -> init(WINSIZE_X, WINSIZE_Y);
+}
+
 
 void GameNode::release(void)
 {
@@ -17,18 +27,19 @@ void GameNode::release(void)
 
     KEYMANAGER->releaseSingleton();
     RND->releaseSingleton();
+
+    SAFE_DELETE(_backBuffer);
 }
 
 // 갱신 -> 타이머의 주기(정밀도)
 void GameNode::update(void)
 {
-    InvalidateRect(_hWnd, NULL, true);
+    InvalidateRect(_hWnd, NULL, false);
 }
 
 //재정의를 전제로 하는 녀석이라 정의하지 않음.
 void GameNode::render(HDC)
 {
-    //! Do Nothing
 }
 
 LRESULT GameNode::MainProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
