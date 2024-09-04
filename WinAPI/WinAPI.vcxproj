@@ -148,6 +148,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="GameNode.cpp" />
+    <ClCompile Include="GImage.cpp" />
     <ClCompile Include="KeyManager.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="Stdafx.cpp">
@@ -179,6 +180,7 @@
     </ClInclude>
     <ClInclude Include="CommonMacroFunction.h" />
     <ClInclude Include="GameNode.h" />
+    <ClInclude Include="GImage.h" />
     <ClInclude Include="IWindowsMessageHandler.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>

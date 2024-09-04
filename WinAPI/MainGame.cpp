@@ -6,7 +6,15 @@ HRESULT MainGame::init(void)
 {
     GameNode::init();
 
-    rc = RectMakeCenter(WINSIZE_X / 2, WINSIZE_Y / 2, 100, 100);
+    _bgImage = new GImage();
+    _bgImage->init("Resource/Images/BackGround/EnderLiliesBG.bmp", WINSIZE_X, WINSIZE_Y);
+
+    _plImage = new GImage();
+    _plImage->init("Resource/Images/Object/Lily.bmp", 445/2 , 508/2 , true, RGB(255, 0, 255));
+
+    _rc = RectMakeCenter(WINSIZE_X / 2 - 500, WINSIZE_Y / 2 + 200, 445/2, 508/2);
+
+    //ShowCursor();
 
     return S_OK;
 }
@@ -14,7 +22,9 @@ HRESULT MainGame::init(void)
 void MainGame::release(void)
 {
     GameNode::release();
-    // 동적 할당 해제
+
+    SAFE_DELETE(_bgImage);
+    SAFE_DELETE(_plImage);
 }
 
 void MainGame::update(void)
@@ -23,33 +33,56 @@ void MainGame::update(void)
 
     if (KEYMANAGER->isStayKeyDown(VK_UP))
     {
-        rc.top -= 3;
-        rc.bottom -= 3;
+        _rc.top -= 3;
+        _rc.bottom -= 3;
     }
 
     if (KEYMANAGER->isStayKeyDown(VK_DOWN))
     {
-        rc.top += 3;
-        rc.bottom += 3;
+        _rc.top += 3;
+        _rc.bottom += 3;
     }
 
     if (KEYMANAGER->isStayKeyDown(VK_LEFT))
     {
-        rc.left -= 3;
-        rc.right -= 3;
+        _rc.left -= 3;
+        _rc.right -= 3;
     }
 
     if (KEYMANAGER->isStayKeyDown(VK_RIGHT))
     {
-        rc.left += 3;
-        rc.right += 3;
+        _rc.left += 3;
+        _rc.right += 3;
     }
+
+    //if (PtInRect())
+    //{
+
+    //}
+    //if (IntersectRect())
+    //{
+
+    //}
 }
 
 void MainGame::render(HDC hdc)
 {
+    // 백버퍼 가져오기
+    HDC memDC = this->getBackBuffer()->getMemDC();
+
+    // 검은색 비트맵 (빈)
+    PatBlt(memDC, 0, 0, WINSIZE_X, WINSIZE_Y, BLACKNESS);
+    //====================================================================
+
+    _bgImage->render(memDC, 0, 0);
+
     if (KEYMANAGER->isToggleKey(VK_F1))
     {
-        Rectangle(hdc, rc.left, rc.top, rc.right, rc.bottom);
+        Rectangle(memDC, _rc.left, _rc.top, _rc.right, _rc.bottom);
     }
+
+    _plImage->render(memDC, _rc.left, _rc.top);
+
+    //====================================================================
+    this->getBackBuffer()->render(hdc, 0, 0);
 }

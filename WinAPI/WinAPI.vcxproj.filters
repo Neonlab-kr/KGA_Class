@@ -60,6 +60,7 @@
     <ClCompile Include="KeyManager.cpp">
       <Filter>API FrameWork\ManagerClass</Filter>
     </ClCompile>
+    <ClCompile Include="GImage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C3DMatrix.h">
@@ -90,5 +91,6 @@
     <ClInclude Include="KeyManager.h">
       <Filter>API FrameWork\ManagerClass</Filter>
     </ClInclude>
+    <ClInclude Include="GImage.h" />
   </ItemGroup>
 </Project>

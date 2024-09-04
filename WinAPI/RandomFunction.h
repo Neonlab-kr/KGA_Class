@@ -14,7 +14,7 @@ public :
 	}
 	~RandomFunction() {}
 
-	HRESULT init() { return S_OK; }
+	HRESULT init(void) { return S_OK; }
 	
 	inline int getInt(int num)
 	{

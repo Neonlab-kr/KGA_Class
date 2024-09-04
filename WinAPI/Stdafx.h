@@ -74,7 +74,7 @@ ID2D1HwndRenderTarget* _ID2DRenderTarget = nullptr;
 #define WINNAME		(LPSTR)(TEXT("WindowsAPI"))
 #define WINSTART_X	400
 #define WINSTART_Y	400
-#define WINSIZE_X	800
+#define WINSIZE_X	1280
 #define WINSIZE_Y	800
 #define WINSTYLE	WS_CAPTION | WS_SYSMENU
 
