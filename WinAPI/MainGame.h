@@ -11,6 +11,11 @@ private:
 
 	RECT _rc;
 
+	int _countA, _countB;
+	int _alphaA, _alphaB;
+
+	bool _isAlphaIncrese;
+
 public:
 	HRESULT init(void);
 	void release(void);

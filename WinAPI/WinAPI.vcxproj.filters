@@ -34,6 +34,9 @@
     <Filter Include="API FrameWork\ManagerClass">
       <UniqueIdentifier>{2aa1faf7-16b7-4422-a273-774882897818}</UniqueIdentifier>
     </Filter>
+    <Filter Include="API FrameWork\Image">
+      <UniqueIdentifier>{189cbec2-2a26-4eee-b7f0-a6548fe2a2c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C3DMatrix.cpp">
@@ -60,7 +63,9 @@
     <ClCompile Include="KeyManager.cpp">
       <Filter>API FrameWork\ManagerClass</Filter>
     </ClCompile>
-    <ClCompile Include="GImage.cpp" />
+    <ClCompile Include="GImage.cpp">
+      <Filter>API FrameWork\Image</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C3DMatrix.h">
@@ -91,6 +96,8 @@
     <ClInclude Include="KeyManager.h">
       <Filter>API FrameWork\ManagerClass</Filter>
     </ClInclude>
-    <ClInclude Include="GImage.h" />
+    <ClInclude Include="GImage.h">
+      <Filter>API FrameWork\Image</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

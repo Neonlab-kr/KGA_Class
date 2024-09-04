@@ -47,6 +47,9 @@ private:
 	COLORREF		_transColor;
 	// COLORREF : 부호 없는 32비트 정수 -> 윈도우에서 색상값 표현에 사용되는 녀석
 
+	BLENDFUNCTION _blendFunction;
+	LPIMAGE_INFO _blendImage;
+
 public:
 	HRESULT init(int width, int height);
 
@@ -54,12 +57,22 @@ public:
 	
 	HRESULT init(const char* fileName, int width, int height, bool isTrans = false, COLORREF transColor = RGB(0, 0, 0));
 
+	HRESULT initForAlphaBlend(void);
+
 	void setTransColor(bool isTrans, COLORREF transcolor);
 
 	void release(void);
 
 	void render(HDC hdc);// 위치가 없으므로 0,0에 출력(배경에 적합)
 	void render(HDC hdc, int destX, int destY);// destX, destY에 출력
+	
+	// 클리핑을 전제하는 렌더함수
+	void render(HDC hdc, int destX, int destY, int sourX, int sourY, int sourWidth, int sourHeight);
+
+	// 알파
+	void alphaRender(HDC hdc, BYTE alpha);
+	void alphaRender(HDC hdc,int destX, int destY ,BYTE alpha);
+	// void alphaRender(HDC gdc, int destX, int destY, int sourX, int sourY, int sourWidth, int sourHeight, BYTE alpha);
 
 	inline HDC getMemDC(void) { return _imageInfo->hMemDC; }
 

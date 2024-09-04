@@ -1,7 +1,9 @@
 #include "Stdafx.h"
 #include "GImage.h"
 
-GImage::GImage() : _imageInfo(nullptr), _fileName(nullptr), _isTrans(false), _transColor(RGB(0,0,0))//확장성을 고려하면 NULL이 좋겠지만 C++에서 캐스팅 해서 쓸거라 nullptr
+#pragma comment (lib, "msimg32.lib")
+
+GImage::GImage() : _imageInfo(nullptr), _fileName(nullptr), _isTrans(false), _transColor(RGB(0,0,0)), _blendImage(NULL)//확장성을 고려하면 NULL이 좋겠지만 C++에서 캐스팅 해서 쓸거라 nullptr
 {
 }
 
@@ -68,6 +70,28 @@ HRESULT GImage::init(const char* fileName, int width, int height, bool isTrans, 
     return S_OK;
 }
 
+HRESULT GImage::initForAlphaBlend(void)
+{
+    HDC hdc = GetDC(_hWnd);
+    _blendFunction.BlendFlags = 0;//
+    _blendFunction.AlphaFormat = 0;// 비트의 혼합방식을 컴퓨터에게 맡기지 않겠다.
+    _blendFunction.BlendOp = AC_SRC_OVER;// 비트맵과 혼합 연산
+    //_blendFunction.SourceConstantAlpha
+
+    _blendImage = new IMAGE_INFO;
+    _blendImage->loadType = LOAD_FILE;
+    _blendImage->resId = 0;
+    _blendImage->hMemDC = CreateCompatibleDC(hdc);
+    _blendImage->hBit = (HBITMAP)CreateCompatibleBitmap(hdc, _imageInfo->width, _imageInfo->height);
+    _blendImage->hOBit = (HBITMAP)SelectObject(_blendImage->hMemDC, _blendImage->hBit);
+    _blendImage->width = WINSIZE_X;
+    _blendImage->height = WINSIZE_Y;
+
+    ReleaseDC(_hWnd, hdc);
+
+    return S_OK;
+}
+
 void GImage::setTransColor(bool isTrans, COLORREF transcolor)
 {
     _isTrans = isTrans;
@@ -87,6 +111,14 @@ void GImage::release(void)
 
         _isTrans = false;
         _transColor = RGB(0, 0, 0);
+    }
+    if (_blendImage)
+    {
+        SelectObject(_blendImage->hMemDC, _blendImage->hOBit);
+        DeleteObject(_blendImage->hBit);
+        DeleteDC(_blendImage->hMemDC);
+
+        SAFE_DELETE(_blendImage);
     }
 }
 
@@ -115,5 +147,60 @@ void GImage::render(HDC hdc, int destX, int destY)
     else
     {
         BitBlt(hdc, destX, destY, _imageInfo->width, _imageInfo->height, _imageInfo->hMemDC, 0, 0, SRCCOPY);
+    }
+}
+
+void GImage::render(HDC hdc, int destX, int destY, int sourX, int sourY, int sourWidth, int sourHeight)
+{
+    if (_isTrans)
+    {
+        GdiTransparentBlt(hdc, destX, destY, sourWidth, sourHeight, _imageInfo->hMemDC, sourX, sourY, sourWidth, sourHeight, _transColor);
+    }
+    else
+    {
+        BitBlt(hdc, destX, destY, sourWidth, sourHeight, _imageInfo->hMemDC, sourX, sourY, SRCCOPY);
+    }
+}
+
+void GImage::alphaRender(HDC hdc, BYTE alpha)
+{
+    if (!_blendImage) initForAlphaBlend();
+
+    _blendFunction.SourceConstantAlpha = alpha;
+
+    if (_isTrans)
+    {
+        //1. 출력해야할 DC에 그려져 있는 내용을 _blendImage에 그린다.
+        BitBlt(_blendImage->hMemDC, 0, 0, _imageInfo->width, _imageInfo->height, hdc, 0, 0, SRCCOPY);
+
+        //2. 원본 이미지의 배경을 없앤 후 _blendImage에 그린다.
+        GdiTransparentBlt(_blendImage->hMemDC, 0, 0, _imageInfo->width, _imageInfo->height, _imageInfo->hMemDC, 0, 0, _imageInfo->width, _imageInfo->height, _transColor);
+
+        //3. blending된 이미지를 화면에 그린다.
+        AlphaBlend(hdc, 0, 0, _imageInfo->width, _imageInfo->height, _blendImage->hMemDC, 0, 0, _imageInfo->width, _imageInfo->height, _blendFunction);
+    }
+    else
+    {
+        AlphaBlend(hdc, 0, 0, _imageInfo->width, _imageInfo->height, _imageInfo->hMemDC, 0, 0, _imageInfo->width, _imageInfo->height, _blendFunction);
+    }
+}
+
+void GImage::alphaRender(HDC hdc, int destX, int destY, BYTE alpha)
+{
+    if (!_blendImage) initForAlphaBlend();
+
+    _blendFunction.SourceConstantAlpha = alpha;
+
+    if (_isTrans)
+    {
+        BitBlt(_blendImage->hMemDC, 0, 0, _imageInfo->width, _imageInfo->height, hdc, destX, destY, SRCCOPY);
+
+        GdiTransparentBlt(_blendImage->hMemDC, 0, 0, _imageInfo->width, _imageInfo->height, _imageInfo->hMemDC, 0, 0, _imageInfo->width, _imageInfo->height, _transColor);
+
+        AlphaBlend(hdc, destX, destY, _imageInfo->width, _imageInfo->height, _blendImage->hMemDC, 0, 0, _imageInfo->width, _imageInfo->height, _blendFunction);
+    }
+    else
+    {
+        AlphaBlend(hdc, destX, destY, _imageInfo->width, _imageInfo->height, _imageInfo->hMemDC, 0, 0, _imageInfo->width, _imageInfo->height, _blendFunction);
     }
 }

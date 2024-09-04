@@ -16,6 +16,11 @@ HRESULT MainGame::init(void)
 
     //ShowCursor();
 
+    _countA = _countB = 0;
+    _alphaA = _alphaB = 0;
+
+    _isAlphaIncrese = false;
+
     return S_OK;
 }
 
@@ -63,6 +68,21 @@ void MainGame::update(void)
     //{
 
     //}
+
+    _countA++;
+    if (_countA % 3 == 0)
+    {
+        _alphaA++;
+        if (_alphaA >= 255) _alphaA = 0;
+        //if (_alphaA >= 255) _alphaA = _alphaA * -1;
+    }
+
+    _countB++;
+    if (_countB % 3 == 0)
+    {
+        _alphaB+=5;
+        if (_alphaB >= 255) _alphaB = 0;
+    }
 }
 
 void MainGame::render(HDC hdc)
@@ -74,14 +94,19 @@ void MainGame::render(HDC hdc)
     PatBlt(memDC, 0, 0, WINSIZE_X, WINSIZE_Y, BLACKNESS);
     //====================================================================
 
-    _bgImage->render(memDC, 0, 0);
+    //_bgImage->render(memDC, 0, 0);
+    _bgImage->alphaRender(memDC, _alphaA);
 
     if (KEYMANAGER->isToggleKey(VK_F1))
     {
         Rectangle(memDC, _rc.left, _rc.top, _rc.right, _rc.bottom);
     }
 
-    _plImage->render(memDC, _rc.left, _rc.top);
+    //_plImage->render(memDC, _rc.left, _rc.top);
+    //_plImage->alphaRender(memDC, _rc.left, _rc.top, _alphaB);
+
+    //Å¬¸®ÇÎ
+    _bgImage->render(memDC, _rc.left, _rc.top, 500, 500, 300, 300);
 
     //====================================================================
     this->getBackBuffer()->render(hdc, 0, 0);
