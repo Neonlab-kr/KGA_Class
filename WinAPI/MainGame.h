@@ -8,13 +8,18 @@ private:
 	//매니저 개체가 없어서 처리중
 	GImage* _bgImage;
 	GImage* _plImage;
+	GImage* _nine;
 
 	RECT _rc;
 
 	int _countA, _countB;
 	int _alphaA, _alphaB;
 
-	bool _isAlphaIncrese;
+	bool _isAlphaIncrease;
+
+	int _count;
+	int _index;
+	bool _isLeft;
 
 public:
 	HRESULT init(void);

@@ -19,7 +19,21 @@ HRESULT MainGame::init(void)
     _countA = _countB = 0;
     _alphaA = _alphaB = 0;
 
-    _isAlphaIncrese = false;
+    _isAlphaIncrease = false;
+
+    _nine = new GImage();
+    _nine->init
+    (
+        "Resource/Images/Object/Nine.bmp",
+        WINSIZE_X / 2 - 200,
+        WINSIZE_Y / 2 - 200,
+        3940, 586, // 전체 이미지 크기
+        10, 2,// 이미지 가로,세로 개수
+        true, RGB(255, 0, 255)
+    );
+
+    _isLeft = false;
+    _count = _index = 0;
 
     return S_OK;
 }
@@ -30,11 +44,53 @@ void MainGame::release(void)
 
     SAFE_DELETE(_bgImage);
     SAFE_DELETE(_plImage);
+    SAFE_DELETE(_nine);
 }
 
 void MainGame::update(void)
 {
     GameNode::update();
+
+    if (KEYMANAGER->isStayKeyDown(VK_LEFT))
+    {
+        _isLeft = true;
+        _nine->setX(_nine->getX() + 8.0f);
+    }
+
+    if (KEYMANAGER->isStayKeyDown(VK_RIGHT))
+    {
+        _isLeft = false;
+        _nine->setX(_nine->getX() + 8.0f);
+    }
+
+    if (_isLeft)
+    {
+        _count++;
+        _nine->setFrameY(1);
+        if (_count % 3 == 0)
+        {
+            _index--;
+            if (_index < 0)
+            {
+                _index = 10;
+            }
+            _nine->setFrameX(_index);
+        }
+    }
+    else
+    {
+        _count++;
+        _nine->setFrameY(0);
+        if (_count % 3 == 0)
+        {
+            _index++;
+            if (_index > 10)
+            {
+                _index = 0;
+            }
+            _nine->setFrameX(_index);
+        }
+    }
 
     if (KEYMANAGER->isStayKeyDown(VK_UP))
     {
@@ -95,19 +151,22 @@ void MainGame::render(HDC hdc)
     //====================================================================
 
     //_bgImage->render(memDC, 0, 0);
-    _bgImage->alphaRender(memDC, _alphaA);
+    //_bgImage->alphaRender(memDC, _alphaA);
 
-    if (KEYMANAGER->isToggleKey(VK_F1))
-    {
-        Rectangle(memDC, _rc.left, _rc.top, _rc.right, _rc.bottom);
-    }
+    //if (KEYMANAGER->isToggleKey(VK_F1))
+    //{
+    //    Rectangle(memDC, _rc.left, _rc.top, _rc.right, _rc.bottom);
+    //}
 
     //_plImage->render(memDC, _rc.left, _rc.top);
     //_plImage->alphaRender(memDC, _rc.left, _rc.top, _alphaB);
 
     //클리핑
-    _bgImage->render(memDC, _rc.left, _rc.top, 500, 500, 300, 300);
+    //_bgImage->render(memDC, _rc.left, _rc.top, 500, 500, 300, 300);
+
+    _nine->frameRender(memDC, _nine->getX(), _nine->getY());
 
     //====================================================================
-    this->getBackBuffer()->render(hdc, 0, 0);
+    //this->getBackBuffer()->render(hdc, 0, 0);
+    this->getBackBuffer()->render(hdc);
 }
